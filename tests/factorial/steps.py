@@ -20,4 +20,7 @@ def then_i_see_the_number_group1(step, number):
 
 
 def compute_factorial(number):
-    return 1
+    if (number == 0) or (number == 1):
+        return 1
+    else:
+        return number * compute_factorial(number - 1)

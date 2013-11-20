@@ -17,3 +17,16 @@ Feature: Compute factorial
         Given I have the number "4"
         When I compute its factorial
         Then I see the number "24"
+
+    Scenario Outline: Factorials from 0 to 4
+        Given I have the number "<number>"
+        When I compute its factorial
+        Then I see the number "<result>"
+
+    Examples:
+        | number | result |
+        | 0      | 1      |
+        | 1      | 1      |
+        | 2      | 2      |
+        | 3      | 6      |
+        | 4      | 24     |
